@@ -1,5 +1,5 @@
 let player = {
-    name: "",
+    name: "Player1",
     chips: 200
 }
 
@@ -12,6 +12,7 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let playerEl = document.getElementById("player-el")
+
 
 playerEl.textContent = player.name + ": " + player.chips
 
@@ -62,4 +63,10 @@ function newCard() {
         cards.push(card)
         renderGame()        
     }
+}
+
+function quitGame(){
+isAlive=false
+sumEl.textContent = " See you soon ! "
+cardsEl.textContent= " Byee !"
 }
